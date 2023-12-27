@@ -40,8 +40,9 @@ Scenario:Kullanıcı "Acentemiz Olun" sekmesinden Acente olmak için başvuru ya
   Then Telefon No kutucuguna TR'de geçerli cep telefonu kodları haricinde kodla telefon numarası girer
   Then "Lütfen geçerli bir cep telefon numarası giriniz" uyarısını aldığını doğrular
   Then Telefon No kutucuguna eksik numara ile kayıt yapmayı girer
-  Then "Girdiğiniz format hatalı" uyarısını  aldığını doğrular
+  Then "Girdiğiniz format hatali" uyarisini  aldıgını dogrular
   Then Mail kutucuguna @ işaretinden sonra herhangi bir karakter ile mail girer
+  Then " Bu alanı doldurmak zorunludur" uyarisini aldigini dogrular
   Then Egitim durumu DDM den secmeden girer "Bu alanı doldurmak zorunludur" mesajını alir
   Then Güvenlik Kodu sekmesine, ekranda görünen Güvenlik kodunu girer.
   And "Başvurunuz ilgili ekiplerimiz ile paylaşılmıştır, teşekkür ederiz." mesajini görür
