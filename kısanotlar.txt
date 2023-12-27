@@ -1,0 +1,69 @@
+
+
+Java'da `final` anahtar kelimesiyle işaretlenmiş 
+bir sınıf başka bir sınıf tarafından miras alınamaz. 
+Yani, bir sınıf `final` olarak işaretlendiğinde, 
+bu sınıfın alt sınıfları oluşturulamaz. `final` olarak işaretlenmiş bir sınıfın davranışları ve özellikleri değiştirilemez ve genişletilemez. Dolayısıyla, `final` olarak işaretlenmiş bir sınıfın alt sınıf olarak kullanılması mümkün değildir.
+
+
+
+import net.sourceforge.tesseract.Tesseract;
+
+public class TesseractTest {
+
+    public static void main(String[] args) throws Exception {
+
+        // Tesseract'ı başlatın
+        Tesseract tesseract = new Tesseract();
+
+        // Görüntüyü yükleyin
+        File imageFile = new File("image.png");
+        tesseract.setInput(imageFile);
+
+        // Metni çıkarın
+        String text = tesseract.getOCRText();
+
+        // Metni yazdırın
+        System.out.println(text);
+    }
+}
+
+
+MEHMET SERKANT BEY ARASKARGO TEAM03 PROJEDEN
+
+HERGÜN AKŞAM 19:30'DA MASTER REPO GÜNCELLENECEK
+
+---KOD YAZMADAN ÖNCE YAPILMASI GEREKENLER---(PULL İŞLEMİ)
+git branch komutu ile hangi brancte oldugumuzu gorduk
+master'da degilsek master branchine gecis yapıyoruz(git checkout master)
+git pull githubdaki master ile localdeki masteri eşitledik
+git checkout "Branch isimi" [Kendi branchimize geçiş yapıyoruz]
+git merge master [Masterdaki degişikleri kendi branchimize aktardık]
+
+
+---KOD YAZMA İŞLEMİ BİTTİKTEN SONRA YAPILMASI GEREKENLER---(PUSH İŞLEMİ)
+git add . [Degişiklik yaptıgımız herşeyi Paket haline getiriyor]
+git commit -m "........." [Bu pakete isim veriyor]
+git push [Bu paketi repoya gönderiyor]
+git commit kullanımı "mehmet-24.10.2023-v1"
+PUSH SAATİ : 19:30
+
+
+
+GÜVENLİK KODU KODLARI
+//public static boolean verifyCaptcha(WebDriver driver, String expectedCaptchaValue) {
+   //    // Captcha'yı içeren web elementini alın
+   //    WebElement captchaElement = driver.findElement(By.xpath("(//*[@class='ng-star-inserted'])[4]"));
+
+   //    // Captcha'yı bir dosyaya kaydedin
+   //    File captchaFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+   //    // Görüntüden metni çıkarın
+
+   //    String captchaValue = Tesseract.getOCRText(captchaFile);
+
+   //    // Captcha değerlerini karşılaştırın
+   //    return captchaValue.equals(expectedCaptchaValue);
+   //}
+
+ 
