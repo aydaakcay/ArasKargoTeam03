@@ -215,4 +215,9 @@ public class ReusableMethods {
         FileUtils.copyFile(image,new File(path));
     }
 
+    public static void switchToWindow2(int windowNumber) {
+        List<String> list = new ArrayList<>(Driver.getDriver().getWindowHandles());
+        Driver.getDriver().switchTo().window(list.get(windowNumber));
+    }
+
 }
