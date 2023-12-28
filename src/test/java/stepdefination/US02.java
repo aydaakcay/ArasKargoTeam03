@@ -3,7 +3,10 @@ package stepdefination;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.US02Pages;
 import utilities.Driver;
@@ -14,6 +17,7 @@ import java.io.IOException;
 public class US02 {
     US02Pages us02Pages = new US02Pages();
     Actions actions = new Actions(Driver.getDriver());
+
 
     @Given("Kullanıcı {string} e gider.")
     public void kullanıcı_e_gider(String string) {
@@ -27,6 +31,8 @@ public class US02 {
 //            Driver.clickWithJS(ambalajUrunleriPage.popUpAccept);
 //        }catch (Exception e){
 //        }
+
+
     }
 
     @When("Kullanıcı Hizmetlerimiz butonu üzerine gelir")
