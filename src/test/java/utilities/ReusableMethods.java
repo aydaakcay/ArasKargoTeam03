@@ -185,6 +185,7 @@ public class ReusableMethods {
         System.out.println("Attribute Value: = " + attribute_Value);
     }
 
+
     public static void switchToWindow(String targetTitle) throws IOException {
         String origin = Driver.getDriver().getWindowHandle();
         for (String handle : Driver.getDriver().getWindowHandles()) {
@@ -214,10 +215,16 @@ public class ReusableMethods {
         String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";
         FileUtils.copyFile(image,new File(path));
     }
+<<<<<<< HEAD
+git
+
+
+=======
+>>>>>>> main
+
 
     public static void switchToWindow2(int windowNumber) {
         List<String> list = new ArrayList<>(Driver.getDriver().getWindowHandles());
         Driver.getDriver().switchTo().window(list.get(windowNumber));
     }
-
 }
