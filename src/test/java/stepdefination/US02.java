@@ -3,9 +3,13 @@ package stepdefination;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.US02Pages;
+import pages.US09Pages;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -15,24 +19,33 @@ public class US02 {
     US02Pages us02Pages = new US02Pages();
     Actions actions = new Actions(Driver.getDriver());
 
+    SearchContext shadowRootElement;
+    WebElement hiddenElement;
+    US09Pages us09Pages = new US09Pages();
+
     @Given("Kullanıcı {string} e gider.")
     public void kullanıcı_e_gider(String string) {
 
         Driver.getDriver().get(string);
+        try {
+            us09Pages.popUpClose.click();
+        }catch (Exception e){}
 
-//        Driver.clickWithJS(ambalajUrunleriPage.popUpAccept);
-//        Driver.getDriver().get(ConfigReader.getProperty("url"));
-////        CEREZ CIKAN ARKADARLAR ICIN, CEREZI OKEYLEYELIM
-//        try{
-//            Driver.clickWithJS(ambalajUrunleriPage.popUpAccept);
-//        }catch (Exception e){
-//        }
+        ReusableMethods.bekle(1);
+
+        try {
+            shadowRootElement =
+                    Driver.getDriver().findElement(By.cssSelector(".efilli-layout-default")).getShadowRoot();
+            hiddenElement =
+                    shadowRootElement.findElement(By.cssSelector(".banner__accept-button"));
+//            shadowRootElement.findElement(By.cssSelector("banner__reject-button"));
+            hiddenElement.click();
+        } catch (Exception ignored) {
+        }
     }
 
     @When("Kullanıcı Hizmetlerimiz butonu üzerine gelir")
     public void kullanıcı_hizmetlerimiz_butonu_üzerine_gelir() throws InterruptedException {
-        ReusableMethods.click(us02Pages.closeButon);
-        ReusableMethods.bekle(1);
         ReusableMethods.hover(us02Pages.hizmetlerimizButon);
         ReusableMethods.bekle(2);
     }
