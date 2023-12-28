@@ -211,7 +211,7 @@ public class ReusableMethods {
 //        getting the current time as string to use in teh screenshot name, previous screenshots will be kept
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 
-//        Path of screenshot save folder               folder / folder    /file name
+//        Path of screenshot save folder               folder / folder    /file namekeckout
         String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";
         FileUtils.copyFile(image,new File(path));
     }
