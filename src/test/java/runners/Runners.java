@@ -18,9 +18,9 @@ import org.junit.runner.RunWith;
         her ruuner için ayrı ayrı tekbir html sayfasında raporu görebiliriz
          */
         features = "src/test/resources/features", //features package'ının yolu (content root)
-        glue = "stepdefination", //stepDefinitions package ismi
-        tags = "@Mehmet", //Hangi scenarioları bu tag'ı belirtirsek o scenariolar çalışır
-        dryRun = false, //true seçersek scenariolari kontrol eder browser'ı çalıştırmaz
+        glue = "stepDefinitions", //stepDefinitions package ismi
+        tags = " @EnYakinSubeler_US", //Hangi scenarioları bu tag'ı belirtirsek o scenariolar çalışır
+        dryRun =false, //true seçersek scenariolari kontrol eder browser'ı çalıştırmaz
         monochrome = true//-->true kullanırsak konsoldaki çıktıları tek renk(siyah) olarak verir
 )
 public class Runners {

@@ -13,7 +13,7 @@ public class Driver {
 
     private Driver() {
             /*
-       Driver class'indan obje olusturmanin onunce gecebilmek icin
+       Driver class'indan obje olusturmanin onune gecebilmek icin
        default constructor'i private yaparak bunu engellemis oluruz.
         Bu kaliba da Singleton patter denir
        */
