@@ -11,16 +11,13 @@ public class Araskargopage_suat {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = ("//*[text()=' Yurt Dışı '])"))
+    @FindBy(xpath = ("//*[text()=' Yurt Dışı ']"))
     public WebElement YURTDIŞI;
 
     @FindBy(xpath =("//*[@class='mat-form-field-flex ng-tns-c2842056177-19']"))
     public WebElement nereyeikonu;
     @FindBy(xpath = ("//*[@class='ng-tns-c2842056177-19']"))
     public WebElement nereyeikonuokişareti;
-
-    @FindBy(xpath = ("//*[@class='mat-option-text']"))
-    public WebElement okişaretiafganistan;
 
 
     @FindBy(xpath = ("//*[@class='selectable-box_left']"))
@@ -41,8 +38,6 @@ public class Araskargopage_suat {
     @FindBy(xpath = ("//*[@class='desi-btn']"))
     public WebElement desikğbutton;
 
-    @FindBy(xpath = ("//*[@class='selectable-box selectable-box-active']"))
-    public WebElement dosyaevrakbutton;
 
     @FindBy(xpath = ("//*[text()='Yeni Hesaplama Yap']"))
     public WebElement yenihesaplamayapbutton;
@@ -84,6 +79,29 @@ public class Araskargopage_suat {
 
     @FindBy(xpath = ("//*[@class='info-box__line']"))
     public WebElement toplamtutarbutton;
+
+
+    @FindBy(xpath = ("//*[@id='mat-input-11']"))
+    public WebElement yurtdışınereyeülkebutonu;
+
+
+
+    @FindBy(xpath = ("(//*[@class='selectable-box_left'])[2]"))
+    public WebElement EVRAKİKONUBUTTON;
+
+    @FindBy(xpath = ("//*[@class='selectable-service__content']"))
+    public WebElement YURTDIŞIEXPERSHİZMETİ;
+
+    @FindBy(xpath = ("//*[@class='mat-form-field-infix ng-tns-c2842056177-23']"))
+    public WebElement Okişareti;
+    @FindBy(xpath = ("//*[@class='ng-tns-c2842056177-23']"))
+    public WebElement ÜLKEOK;
+
+    @FindBy(xpath = ("//*[@class='mat-option-text'][1]"))
+    public WebElement AFGANİSTAN;
+
+    @FindBy(xpath = ("//*[@class='info-box-bottom ng-star-inserted']"))
+    public WebElement TOPLAMTUTAR;
 
 
 
