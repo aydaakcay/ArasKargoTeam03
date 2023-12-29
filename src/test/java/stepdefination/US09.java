@@ -67,6 +67,7 @@ public class US09 {
         ReusableMethods.bekle(2);
 
 
+
     }
     @When("Kullanıcı girmesi gereken mail adresi bilgisini girer ve gönder butonuna tiklar")
     public void kullanıcı_girmesi_gereken_mail_adresi_bilgisini_girer_ve_gönder_butonuna_tiklar() {
@@ -90,11 +91,9 @@ public class US09 {
 
     }
     @Then("Kullanıcı Ilgili soruya yönlendirildigini dogrular.")
-    public void kullanıcı_ılgili_soruya_yönlendirildigini_dogrular() {
+    public void kullanıcı_ılgili_soruya_yönlendirildigini_dogrular() throws IOException {
 
-
-
-
+        Assert.assertTrue(us09Pages.ilgiliMenuNoText.isDisplayed());
 
     }
 
@@ -105,7 +104,7 @@ public class US09 {
         ReusableMethods.bekle(2);
         ReusableMethods.click(us09Pages.gönderButonu);
         ReusableMethods.bekle(2);
-        assertTrue(us09Pages.tesekkurYazısı.getText().contains("teşekkür"));
+        Assert.assertTrue(us09Pages.tesekkurYazısı.getText().contains("teşekkür"));
 
     }
 

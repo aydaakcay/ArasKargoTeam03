@@ -49,4 +49,7 @@ public class US09Pages {
 
     @FindBy(xpath = "//*[text()='Bizimle iletişime geçtiğiniz için teşekkür ederiz.']")
     public WebElement tesekkurYazısı;
+
+    @FindBy(xpath = "//div//p[contains(.,'menü numarasını')]")
+    public WebElement ilgiliMenuNoText;
 }

@@ -215,12 +215,7 @@ public class ReusableMethods {
         String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";
         FileUtils.copyFile(image,new File(path));
     }
-<<<<<<< HEAD
-git
 
-
-=======
->>>>>>> main
 
 
     public static void switchToWindow2(int windowNumber) {
