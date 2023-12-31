@@ -1,7 +1,9 @@
 package stepdefination;
 
 import io.cucumber.java.en.Then;
+import io.cucumber.java.hr.Kad;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.US03_US12Pages;
 import utilities.Driver;
@@ -51,6 +53,7 @@ public class US12_StepDef {
         Assert.assertTrue(us03ayda.arasTahsilatCevap.isDisplayed());
         ReusableMethods.click(us03ayda.arasTahsilatCevapToggle);
         ReusableMethods.bekle(3);
+        actions.sendKeys(Keys.PAGE_DOWN,Keys.PAGE_DOWN,Keys.PAGE_DOWN,Keys.PAGE_DOWN).perform();
 
 
     }
@@ -67,5 +70,6 @@ public class US12_StepDef {
         Assert.assertTrue(us03ayda.arasEodemeCevap.isDisplayed());
         ReusableMethods.click(us03ayda.arasEOdemeCevapToggle);
         ReusableMethods.bekle(3);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
     }
 }
