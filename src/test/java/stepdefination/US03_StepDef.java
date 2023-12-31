@@ -80,6 +80,7 @@ public class US03_StepDef {
 
         actions.sendKeys(us03ayda.isimgir, "Ceyda")
                 .sendKeys(Keys.TAB).perform();
+        ReusableMethods.bekle(2);
 
     }
 
@@ -88,6 +89,7 @@ public class US03_StepDef {
 
         actions.sendKeys(us03ayda.soyisimgir,"Günay")
                 .sendKeys(Keys.TAB).perform();
+        ReusableMethods.bekle(2);
 
      }
 
